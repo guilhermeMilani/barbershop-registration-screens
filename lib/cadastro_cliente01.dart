@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:login/cadastro_cliente02.dart';
-import 'package:login/cadastro_cliente03.dart';
-import 'cadastro_cliente03.dart';
 
 class CadastroCliente01 extends StatefulWidget {
   const CadastroCliente01({Key? key}) : super(key: key);
@@ -88,6 +86,7 @@ class _CadastroCliente01State extends State<CadastroCliente01> {
                             padding: EdgeInsets.only(left: 10),
                             child: TextField(
                               style: TextStyle(color: Colors.white),
+                              keyboardType: TextInputType.emailAddress,
                             ),
                           ),
                         ),

@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:login/cadastro_cliente03.dart';
+import 'package:login/cadastro_barbearia02.dart';
 
-class CadastroCliente02 extends StatefulWidget {
-  const CadastroCliente02({Key? key}) : super(key: key);
+
+
+class CadastroBarbearia01 extends StatefulWidget {
+  const CadastroBarbearia01({Key? key}) : super(key: key);
 
   @override
-  State<CadastroCliente02> createState() => _CadastroCliente02State();
+  State<CadastroBarbearia01> createState() => _CadastroBarbearia01State();
 }
 
-class _CadastroCliente02State extends State<CadastroCliente02> {
+class _CadastroBarbearia01State extends State<CadastroBarbearia01> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,7 +37,7 @@ class _CadastroCliente02State extends State<CadastroCliente02> {
                         child: SizedBox(
                           width: 350,
                           child: Text(
-                            "Insira seu CPF",
+                            "Insira o nome da barbearia",
                             style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
@@ -53,11 +55,9 @@ class _CadastroCliente02State extends State<CadastroCliente02> {
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: const Padding(
-                            padding: EdgeInsets.only(left: 8, right: 8),
+                            padding: EdgeInsets.only(left: 10),
                             child: TextField(
                               style: TextStyle(color: Colors.white),
-                              keyboardType: TextInputType.number,
-                              maxLength: 11,
                             ),
                           ),
                         ),
@@ -68,7 +68,7 @@ class _CadastroCliente02State extends State<CadastroCliente02> {
                       const SizedBox(
                         width: 350,
                         child: Text(
-                          "Insira seu CEP",
+                          "Insira seu e-mail",
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -85,11 +85,10 @@ class _CadastroCliente02State extends State<CadastroCliente02> {
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: const Padding(
-                            padding: EdgeInsets.only(left: 8, right: 8),
+                            padding: EdgeInsets.only(left: 10),
                             child: TextField(
                               style: TextStyle(color: Colors.white),
-                              keyboardType: TextInputType.number,
-                              maxLength: 8,
+                              keyboardType: TextInputType.emailAddress,
                             ),
                           ),
                         ),
@@ -98,65 +97,66 @@ class _CadastroCliente02State extends State<CadastroCliente02> {
                   ),
                 ),
 
+              
                 //Botao proximo daqui pra baixo
               ],
             ),
-            Align(
-              alignment: Alignment.centerRight,
-              child: Padding(
-                padding: const EdgeInsets.only(right: 50, bottom: 30),
-                child: Stack(
-                  clipBehavior: Clip.none,
+                Align(
                   alignment: Alignment.centerRight,
-                  children: [
-                    Container(
-                      width: 120,
-                      height: 45,
-                      decoration: BoxDecoration(
-                          color: const Color.fromRGBO(36, 36, 36, 1),
-                          borderRadius: BorderRadius.circular(20)),
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 5),
-                        child: Row(
-                          children: [
-                            MaterialButton(
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: ((context) =>
-                                        const CadastroCliente03()),
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: 50,bottom: 30),
+                    child: Stack(
+                      clipBehavior: Clip.none,
+                      alignment: Alignment.centerRight,
+                      children: [
+                        Container(
+                          width: 120,
+                          height: 45,
+                          decoration: BoxDecoration(
+                              color: const Color.fromRGBO(36, 36, 36, 1),
+                              borderRadius: BorderRadius.circular(20)),
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 5),
+                            child: Row(
+                              children: [
+                                MaterialButton(
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: ((context) =>
+                                            const CadastroBarbearia02()),
+                                      ),
+                                    );
+                                  },
+                                  child: const Text(
+                                    "Próximo",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18),
                                   ),
-                                );
-                              },
-                              child: const Text(
-                                "Próximo",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 18),
-                              ),
+                                ),
+                              ],
                             ),
-                          ],
+                          ),
                         ),
-                      ),
-                    ),
-                    const Positioned(
-                      right: -30,
-                      child: CircleAvatar(
-                        radius: 29,
-                        backgroundColor: Color.fromRGBO(48, 48, 48, 1),
-                        child: Icon(
-                          Icons.check_circle_rounded,
-                          size: 40,
-                          color: Colors.white,
+                        const Positioned(
+                          right: -30,
+                          child: CircleAvatar(
+                            radius: 29,
+                            backgroundColor: Color.fromRGBO(48, 48, 48, 1),
+                            child: Icon(
+                              Icons.check_circle_rounded,
+                              size: 40,
+                              color: Colors.white,
+                            ),
+                          ),
                         ),
-                      ),
+                      ],
                     ),
-                  ],
+                  ),
                 ),
-              ),
-            ),
           ],
         ),
       ),

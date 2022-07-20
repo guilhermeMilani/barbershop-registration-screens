@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:login/cadastro_cliente03.dart';
+import 'package:login/cadastro_barbearia03.dart';
 
-class CadastroCliente02 extends StatefulWidget {
-  const CadastroCliente02({Key? key}) : super(key: key);
+class CadastroBarbearia02 extends StatefulWidget {
+  const CadastroBarbearia02({Key? key}) : super(key: key);
 
   @override
-  State<CadastroCliente02> createState() => _CadastroCliente02State();
+  State<CadastroBarbearia02> createState() => _CadastroBarbearia02State();
 }
 
-class _CadastroCliente02State extends State<CadastroCliente02> {
+class _CadastroBarbearia02State extends State<CadastroBarbearia02> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,7 +35,7 @@ class _CadastroCliente02State extends State<CadastroCliente02> {
                         child: SizedBox(
                           width: 350,
                           child: Text(
-                            "Insira seu CPF",
+                            "Insira seu CNPJ",
                             style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
@@ -53,11 +53,13 @@ class _CadastroCliente02State extends State<CadastroCliente02> {
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: const Padding(
-                            padding: EdgeInsets.only(left: 8, right: 8),
+                            padding: EdgeInsets.only(left:8.0,right: 8),
                             child: TextField(
-                              style: TextStyle(color: Colors.white),
+                              style: TextStyle(
+                                color: Colors.white,
+                              ),
+                              maxLength: 14,
                               keyboardType: TextInputType.number,
-                              maxLength: 11,
                             ),
                           ),
                         ),
@@ -85,11 +87,11 @@ class _CadastroCliente02State extends State<CadastroCliente02> {
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: const Padding(
-                            padding: EdgeInsets.only(left: 8, right: 8),
+                            padding: EdgeInsets.only(left:8.0,right: 8),
                             child: TextField(
                               style: TextStyle(color: Colors.white),
-                              keyboardType: TextInputType.number,
                               maxLength: 8,
+                              keyboardType: TextInputType.number,
                             ),
                           ),
                         ),
@@ -125,7 +127,7 @@ class _CadastroCliente02State extends State<CadastroCliente02> {
                                   context,
                                   MaterialPageRoute(
                                     builder: ((context) =>
-                                        const CadastroCliente03()),
+                                        const CadastroBarbearia03()),
                                   ),
                                 );
                               },

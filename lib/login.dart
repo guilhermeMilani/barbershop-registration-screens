@@ -87,7 +87,7 @@ class _LoginState extends State<Login> {
                         "Esqueci minha senha",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 9,
+                          fontSize: 11,
                         ),
                       ),
                     ),
@@ -102,7 +102,7 @@ class _LoginState extends State<Login> {
                         "Cadastrar",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 9,
+                          fontSize: 11,
                         ),
                       ),
                     ),

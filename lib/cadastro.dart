@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'cadastro_barbearia.dart';
+import 'cadastro_barbearia01.dart';
 import 'cadastro_cliente01.dart';
 
 class Cadastro extends StatefulWidget {
@@ -81,7 +81,7 @@ class _CadastroState extends State<Cadastro> {
                               context,
                               MaterialPageRoute(
                                 builder: ((context) =>
-                                    const CadastroBarbearia()),
+                                    const CadastroBarbearia01()),
                               ),
                             );
                           },
